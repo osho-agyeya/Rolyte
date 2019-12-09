@@ -1,0 +1,5 @@
+Open folder web app and run python app.py in terminal to see the homepage. Enter the values . On clicking the submit button, the final answer is displayed at the bottom.
+
+Open Jupyter to have a look at the the notebooks for the code used to create the model that was trained and saved.
+
+The libraries needed are numpy,sklearn,flask,python,keras,tensorflow,cv2,skimage and a working internet connection.

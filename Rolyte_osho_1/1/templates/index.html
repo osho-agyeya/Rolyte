@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Epileptic seizure detection</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>  
+
+  <body>
+  	<div>
+      <h1>Epileptic seizure detection</h1>
+        <div>
+	      	<pre id="dataNmodel" class="shiny-text-output noplaceholder shiny-bound-output">
+Epileptic Seizure Recognition Data Set 
+School of Mathematical Sciences Rochester Institute of Technology 
+https://archive.ics.uci.edu/ml/datasets/Epileptic+Seizure+Recognition
+			</pre>
+			<img src="/static/vis.png">
+		</div>
+      <h3>Please enter the value of the variables to find whether the patient has epileptic seizure or not</h3>
+      	<form method="POST" name="form" action="/ress"> 
+      		<div class="form-group row">
+      		
+      				<div class="col-xs-1">X1:<input type="text" class="form-control" name="X1" required/></div>
+<div class="col-xs-1">X2:<input type="text" class="form-control" name="X2" required/></div>
+<div class="col-xs-1">X3:<input type="text" class="form-control" name="X3" required/></div>
+<div class="col-xs-1">X4:<input type="text" class="form-control" name="X4" required/></div>
+<div class="col-xs-1">X5:<input type="text" class="form-control" name="X5" required/></div>
+<div class="col-xs-1">X6:<input type="text" class="form-control" name="X6" required/></div>
+<div class="col-xs-1">X7:<input type="text" class="form-control" name="X7" required/></div>
+<div class="col-xs-1">X8:<input type="text" class="form-control" name="X8" required/></div>
+<div class="col-xs-1">X9:<input type="text" class="form-control" name="X9" required/></div>
+<div class="col-xs-1">X10:<input type="text" class="form-control" name="X10" required/></div>
+<div class="col-xs-1">X11:<input type="text" class="form-control" name="X11" required/></div>
+<div class="col-xs-1">X12:<input type="text" class="form-control" name="X12" required/></div>
+<div class="col-xs-1">X13:<input type="text" class="form-control" name="X13" required/></div>
+<div class="col-xs-1">X14:<input type="text" class="form-control" name="X14" required/></div>
+<div class="col-xs-1">X15:<input type="text" class="form-control" name="X15" required/></div>
+<div class="col-xs-1">X16:<input type="text" class="form-control" name="X16" required/></div>
+<div class="col-xs-1">X17:<input type="text" class="form-control" name="X17" required/></div>
+<div class="col-xs-1">X18:<input type="text" class="form-control" name="X18" required/></div>
+<div class="col-xs-1">X19:<input type="text" class="form-control" name="X19" required/></div>
+<div class="col-xs-1">X20:<input type="text" class="form-control" name="X20" required/></div>
+<div class="col-xs-1">X21:<input type="text" class="form-control" name="X21" required/></div>
+<div class="col-xs-1">X22:<input type="text" class="form-control" name="X22" required/></div>
+<div class="col-xs-1">X23:<input type="text" class="form-control" name="X23" required/></div>
+<div class="col-xs-1">X24:<input type="text" class="form-control" name="X24" required/></div>
+<div class="col-xs-1">X25:<input type="text" class="form-control" name="X25" required/></div>
+<div class="col-xs-1">X26:<input type="text" class="form-control" name="X26" required/></div>
+<div class="col-xs-1">X27:<input type="text" class="form-control" name="X27" required/></div>
+<div class="col-xs-1">X28:<input type="text" class="form-control" name="X28" required/></div>
+<div class="col-xs-1">X29:<input type="text" class="form-control" name="X29" required/></div>
+<div class="col-xs-1">X30:<input type="text" class="form-control" name="X30" required/></div>
+<div class="col-xs-1">X31:<input type="text" class="form-control" name="X31" required/></div>
+<div class="col-xs-1">X32:<input type="text" class="form-control" name="X32" required/></div>
+<div class="col-xs-1">X33:<input type="text" class="form-control" name="X33" required/></div>
+<div class="col-xs-1">X34:<input type="text" class="form-control" name="X34" required/></div>
+<div class="col-xs-1">X35:<input type="text" class="form-control" name="X35" required/></div>
+<div class="col-xs-1">X36:<input type="text" class="form-control" name="X36" required/></div>
+<div class="col-xs-1">X37:<input type="text" class="form-control" name="X37" required/></div>
+<div class="col-xs-1">X38:<input type="text" class="form-control" name="X38" required/></div>
+<div class="col-xs-1">X39:<input type="text" class="form-control" name="X39" required/></div>
+<div class="col-xs-1">X40:<input type="text" class="form-control" name="X40" required/></div>
+<div class="col-xs-1">X41:<input type="text" class="form-control" name="X41" required/></div>
+<div class="col-xs-1">X42:<input type="text" class="form-control" name="X42" required/></div>
+<div class="col-xs-1">X43:<input type="text" class="form-control" name="X43" required/></div>
+<div class="col-xs-1">X44:<input type="text" class="form-control" name="X44" required/></div>
+<div class="col-xs-1">X45:<input type="text" class="form-control" name="X45" required/></div>
+<div class="col-xs-1">X46:<input type="text" class="form-control" name="X46" required/></div>
+<div class="col-xs-1">X47:<input type="text" class="form-control" name="X47" required/></div>
+<div class="col-xs-1">X48:<input type="text" class="form-control" name="X48" required/></div>
+<div class="col-xs-1">X49:<input type="text" class="form-control" name="X49" required/></div>
+<div class="col-xs-1">X50:<input type="text" class="form-control" name="X50" required/></div>
+<div class="col-xs-1">X51:<input type="text" class="form-control" name="X51" required/></div>
+<div class="col-xs-1">X52:<input type="text" class="form-control" name="X52" required/></div>
+<div class="col-xs-1">X53:<input type="text" class="form-control" name="X53" required/></div>
+<div class="col-xs-1">X54:<input type="text" class="form-control" name="X54" required/></div>
+<div class="col-xs-1">X55:<input type="text" class="form-control" name="X55" required/></div>
+<div class="col-xs-1">X56:<input type="text" class="form-control" name="X56" required/></div>
+<div class="col-xs-1">X57:<input type="text" class="form-control" name="X57" required/></div>
+<div class="col-xs-1">X58:<input type="text" class="form-control" name="X58" required/></div>
+<div class="col-xs-1">X59:<input type="text" class="form-control" name="X59" required/></div>
+<div class="col-xs-1">X60:<input type="text" class="form-control" name="X60" required/></div>
+<div class="col-xs-1">X61:<input type="text" class="form-control" name="X61" required/></div>
+<div class="col-xs-1">X62:<input type="text" class="form-control" name="X62" required/></div>
+<div class="col-xs-1">X63:<input type="text" class="form-control" name="X63" required/></div>
+<div class="col-xs-1">X64:<input type="text" class="form-control" name="X64" required/></div>
+<div class="col-xs-1">X65:<input type="text" class="form-control" name="X65" required/></div>
+<div class="col-xs-1">X66:<input type="text" class="form-control" name="X66" required/></div>
+<div class="col-xs-1">X67:<input type="text" class="form-control" name="X67" required/></div>
+<div class="col-xs-1">X68:<input type="text" class="form-control" name="X68" required/></div>
+<div class="col-xs-1">X69:<input type="text" class="form-control" name="X69" required/></div>
+<div class="col-xs-1">X70:<input type="text" class="form-control" name="X70" required/></div>
+<div class="col-xs-1">X71:<input type="text" class="form-control" name="X71" required/></div>
+<div class="col-xs-1">X72:<input type="text" class="form-control" name="X72" required/></div>
+<div class="col-xs-1">X73:<input type="text" class="form-control" name="X73" required/></div>
+<div class="col-xs-1">X74:<input type="text" class="form-control" name="X74" required/></div>
+<div class="col-xs-1">X75:<input type="text" class="form-control" name="X75" required/></div>
+<div class="col-xs-1">X76:<input type="text" class="form-control" name="X76" required/></div>
+<div class="col-xs-1">X77:<input type="text" class="form-control" name="X77" required/></div>
+<div class="col-xs-1">X78:<input type="text" class="form-control" name="X78" required/></div>
+<div class="col-xs-1">X79:<input type="text" class="form-control" name="X79" required/></div>
+<div class="col-xs-1">X80:<input type="text" class="form-control" name="X80" required/></div>
+<div class="col-xs-1">X81:<input type="text" class="form-control" name="X81" required/></div>
+<div class="col-xs-1">X82:<input type="text" class="form-control" name="X82" required/></div>
+<div class="col-xs-1">X83:<input type="text" class="form-control" name="X83" required/></div>
+<div class="col-xs-1">X84:<input type="text" class="form-control" name="X84" required/></div>
+<div class="col-xs-1">X85:<input type="text" class="form-control" name="X85" required/></div>
+<div class="col-xs-1">X86:<input type="text" class="form-control" name="X86" required/></div>
+<div class="col-xs-1">X87:<input type="text" class="form-control" name="X87" required/></div>
+<div class="col-xs-1">X88:<input type="text" class="form-control" name="X88" required/></div>
+<div class="col-xs-1">X89:<input type="text" class="form-control" name="X89" required/></div>
+<div class="col-xs-1">X90:<input type="text" class="form-control" name="X90" required/></div>
+<div class="col-xs-1">X91:<input type="text" class="form-control" name="X91" required/></div>
+<div class="col-xs-1">X92:<input type="text" class="form-control" name="X92" required/></div>
+<div class="col-xs-1">X93:<input type="text" class="form-control" name="X93" required/></div>
+<div class="col-xs-1">X94:<input type="text" class="form-control" name="X94" required/></div>
+<div class="col-xs-1">X95:<input type="text" class="form-control" name="X95" required/></div>
+<div class="col-xs-1">X96:<input type="text" class="form-control" name="X96" required/></div>
+<div class="col-xs-1">X97:<input type="text" class="form-control" name="X97" required/></div>
+<div class="col-xs-1">X98:<input type="text" class="form-control" name="X98" required/></div>
+<div class="col-xs-1">X99:<input type="text" class="form-control" name="X99" required/></div>
+<div class="col-xs-1">X100:<input type="text" class="form-control" name="X100" required/></div>
+<div class="col-xs-1">X101:<input type="text" class="form-control" name="X101" required/></div>
+<div class="col-xs-1">X102:<input type="text" class="form-control" name="X102" required/></div>
+<div class="col-xs-1">X103:<input type="text" class="form-control" name="X103" required/></div>
+<div class="col-xs-1">X104:<input type="text" class="form-control" name="X104" required/></div>
+<div class="col-xs-1">X105:<input type="text" class="form-control" name="X105" required/></div>
+<div class="col-xs-1">X106:<input type="text" class="form-control" name="X106" required/></div>
+<div class="col-xs-1">X107:<input type="text" class="form-control" name="X107" required/></div>
+<div class="col-xs-1">X108:<input type="text" class="form-control" name="X108" required/></div>
+<div class="col-xs-1">X109:<input type="text" class="form-control" name="X109" required/></div>
+<div class="col-xs-1">X110:<input type="text" class="form-control" name="X110" required/></div>
+<div class="col-xs-1">X111:<input type="text" class="form-control" name="X111" required/></div>
+<div class="col-xs-1">X112:<input type="text" class="form-control" name="X112" required/></div>
+<div class="col-xs-1">X113:<input type="text" class="form-control" name="X113" required/></div>
+<div class="col-xs-1">X114:<input type="text" class="form-control" name="X114" required/></div>
+<div class="col-xs-1">X115:<input type="text" class="form-control" name="X115" required/></div>
+<div class="col-xs-1">X116:<input type="text" class="form-control" name="X116" required/></div>
+<div class="col-xs-1">X117:<input type="text" class="form-control" name="X117" required/></div>
+<div class="col-xs-1">X118:<input type="text" class="form-control" name="X118" required/></div>
+<div class="col-xs-1">X119:<input type="text" class="form-control" name="X119" required/></div>
+<div class="col-xs-1">X120:<input type="text" class="form-control" name="X120" required/></div>
+<div class="col-xs-1">X121:<input type="text" class="form-control" name="X121" required/></div>
+<div class="col-xs-1">X122:<input type="text" class="form-control" name="X122" required/></div>
+<div class="col-xs-1">X123:<input type="text" class="form-control" name="X123" required/></div>
+<div class="col-xs-1">X124:<input type="text" class="form-control" name="X124" required/></div>
+<div class="col-xs-1">X125:<input type="text" class="form-control" name="X125" required/></div>
+<div class="col-xs-1">X126:<input type="text" class="form-control" name="X126" required/></div>
+<div class="col-xs-1">X127:<input type="text" class="form-control" name="X127" required/></div>
+<div class="col-xs-1">X128:<input type="text" class="form-control" name="X128" required/></div>
+<div class="col-xs-1">X129:<input type="text" class="form-control" name="X129" required/></div>
+<div class="col-xs-1">X130:<input type="text" class="form-control" name="X130" required/></div>
+<div class="col-xs-1">X131:<input type="text" class="form-control" name="X131" required/></div>
+<div class="col-xs-1">X132:<input type="text" class="form-control" name="X132" required/></div>
+<div class="col-xs-1">X133:<input type="text" class="form-control" name="X133" required/></div>
+<div class="col-xs-1">X134:<input type="text" class="form-control" name="X134" required/></div>
+<div class="col-xs-1">X135:<input type="text" class="form-control" name="X135" required/></div>
+<div class="col-xs-1">X136:<input type="text" class="form-control" name="X136" required/></div>
+<div class="col-xs-1">X137:<input type="text" class="form-control" name="X137" required/></div>
+<div class="col-xs-1">X138:<input type="text" class="form-control" name="X138" required/></div>
+<div class="col-xs-1">X139:<input type="text" class="form-control" name="X139" required/></div>
+<div class="col-xs-1">X140:<input type="text" class="form-control" name="X140" required/></div>
+<div class="col-xs-1">X141:<input type="text" class="form-control" name="X141" required/></div>
+<div class="col-xs-1">X142:<input type="text" class="form-control" name="X142" required/></div>
+<div class="col-xs-1">X143:<input type="text" class="form-control" name="X143" required/></div>
+<div class="col-xs-1">X144:<input type="text" class="form-control" name="X144" required/></div>
+<div class="col-xs-1">X145:<input type="text" class="form-control" name="X145" required/></div>
+<div class="col-xs-1">X146:<input type="text" class="form-control" name="X146" required/></div>
+<div class="col-xs-1">X147:<input type="text" class="form-control" name="X147" required/></div>
+<div class="col-xs-1">X148:<input type="text" class="form-control" name="X148" required/></div>
+<div class="col-xs-1">X149:<input type="text" class="form-control" name="X149" required/></div>
+<div class="col-xs-1">X150:<input type="text" class="form-control" name="X150" required/></div>
+<div class="col-xs-1">X151:<input type="text" class="form-control" name="X151" required/></div>
+<div class="col-xs-1">X152:<input type="text" class="form-control" name="X152" required/></div>
+<div class="col-xs-1">X153:<input type="text" class="form-control" name="X153" required/></div>
+<div class="col-xs-1">X154:<input type="text" class="form-control" name="X154" required/></div>
+<div class="col-xs-1">X155:<input type="text" class="form-control" name="X155" required/></div>
+<div class="col-xs-1">X156:<input type="text" class="form-control" name="X156" required/></div>
+<div class="col-xs-1">X157:<input type="text" class="form-control" name="X157" required/></div>
+<div class="col-xs-1">X158:<input type="text" class="form-control" name="X158" required/></div>
+<div class="col-xs-1">X159:<input type="text" class="form-control" name="X159" required/></div>
+<div class="col-xs-1">X160:<input type="text" class="form-control" name="X160" required/></div>
+<div class="col-xs-1">X161:<input type="text" class="form-control" name="X161" required/></div>
+<div class="col-xs-1">X162:<input type="text" class="form-control" name="X162" required/></div>
+<div class="col-xs-1">X163:<input type="text" class="form-control" name="X163" required/></div>
+<div class="col-xs-1">X164:<input type="text" class="form-control" name="X164" required/></div>
+<div class="col-xs-1">X165:<input type="text" class="form-control" name="X165" required/></div>
+<div class="col-xs-1">X166:<input type="text" class="form-control" name="X166" required/></div>
+<div class="col-xs-1">X167:<input type="text" class="form-control" name="X167" required/></div>
+<div class="col-xs-1">X168:<input type="text" class="form-control" name="X168" required/></div>
+<div class="col-xs-1">X169:<input type="text" class="form-control" name="X169" required/></div>
+<div class="col-xs-1">X170:<input type="text" class="form-control" name="X170" required/></div>
+<div class="col-xs-1">X171:<input type="text" class="form-control" name="X171" required/></div>
+<div class="col-xs-1">X172:<input type="text" class="form-control" name="X172" required/></div>
+<div class="col-xs-1">X173:<input type="text" class="form-control" name="X173" required/></div>
+<div class="col-xs-1">X174:<input type="text" class="form-control" name="X174" required/></div>
+<div class="col-xs-1">X175:<input type="text" class="form-control" name="X175" required/></div>
+<div class="col-xs-1">X176:<input type="text" class="form-control" name="X176" required/></div>
+<div class="col-xs-1">X177:<input type="text" class="form-control" name="X177" required/></div>
+<div class="col-xs-1">X178:<input type="text" class="form-control" name="X178" required/></div>
+				</div>
+					<div><input type="submit" class="btn btn-success" value="Submit">
+					</div>
+      	</form>
+      	<div>
+      		<h2>Results</h2>
+      		<pre id="summary" class="shiny-text-output noplaceholder shiny-bound-output">
+The result of the analysis is:{{variable}}
+Accuracy: 95.63%
+Area Under the Receiver Operating Characteristic Curve: 0.93%</pre>
+      	</div>
+
+    </div>
+  </body>
+
+</html>
